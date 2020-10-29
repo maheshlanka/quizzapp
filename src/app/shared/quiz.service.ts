@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class QuizService {
   //---------------- Properties---------------
-  readonly rootUrl = 'https://quiz-capitalapi.azurewebsites.net';
+  public readonly rootUrl = 'https://quiz-capitalapi.azurewebsites.net';
   qns: any[];
   seconds: number;
   timer;
