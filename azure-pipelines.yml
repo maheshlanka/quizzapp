@@ -1,13 +1,5 @@
 # Node.js with Angular
-- task: SqlDacpacDeploymentOnMachineGroup@0
-  inputs:
-    TaskType: 'sqlQuery'
-    SqlFile: 'scripts.sql'
-    ServerName: 'devopstestscripts.database.windows.net'
-    DatabaseName: 'MSsql'
-    AuthScheme: 'sqlServerAuthentication'
-    SqlUsername: 'devops'
-    SqlPassword: 'corona@2021'
+
 
 # Build a Node.js project that uses Angular.
 # Add steps that analyze code, save build artifacts, deploy, and more:
@@ -24,7 +16,15 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
+- task: SqlDacpacDeploymentOnMachineGroup@0
+  inputs:
+    TaskType: 'sqlQuery'
+    SqlFile: 'scripts.sql'
+    ServerName: 'devopstestscripts.database.windows.net'
+    DatabaseName: 'MSsql'
+    AuthScheme: 'sqlServerAuthentication'
+    SqlUsername: 'devops'
+    SqlPassword: 'corona@2021'
 - script: |
     npm install -g @angular/cli
     npm install
