@@ -19,7 +19,7 @@ steps:
 - task: SqlDacpacDeploymentOnMachineGroup@0
   inputs:
     TaskType: 'sqlQuery'
-    SqlFile: 'src/scripts.sql'
+    SqlFile: ' $(Build.SourcesDirectory)/scripts.sql'
     ServerName: 'devopstestscripts.database.windows.net'
     DatabaseName: 'MSsql'
     AuthScheme: 'sqlServerAuthentication'
